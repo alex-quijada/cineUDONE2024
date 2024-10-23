@@ -1,0 +1,26 @@
+{
+  "name": "back-cartelera-cine",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/back-cartelera-cine/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "back-cartelera-cine:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "back-cartelera-cine:build:development"
+        },
+        "production": {
+          "buildTarget": "back-cartelera-cine:build:production"
+        }
+      }
+    }
+  }
+}

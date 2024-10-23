@@ -1,0 +1,26 @@
+{
+  "name": "back-venta-boletos",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/back-venta-boletos/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "back-venta-boletos:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "back-venta-boletos:build:development"
+        },
+        "production": {
+          "buildTarget": "back-venta-boletos:build:production"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "cartelera-cine",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/cartelera-cine/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project cartelera-cine --web",
+  "targets": {}
+}

@@ -1,0 +1,9 @@
+{
+  "name": "venta-boletos",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/venta-boletos/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project venta-boletos --web",
+  "targets": {}
+}
