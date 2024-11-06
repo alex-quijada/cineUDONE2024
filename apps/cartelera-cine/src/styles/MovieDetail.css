@@ -1,0 +1,121 @@
+/* Estilo para la superposición del modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.90); /* Fondo oscuro semi-transparente */
+  z-index: 999; /* Detrás del modal */
+}
+
+/* Estilo para la vista de detalles de la película */
+.movie-detail-view {
+  position: fixed; /* Fijo para superponerse */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1C1a19; /* Mismo fondo que antes */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 50px #28143A;
+  max-width: 80%; /* Ancho máximo para hacer el modal más horizontal */
+  width: 600px; /* Ajustar el ancho para hacerlo más horizontal */
+  z-index: 1000;
+  overflow-y: auto; /* Habilitar desplazamiento vertical si el contenido es demasiado alto */
+  max-height: 90vh; /* Máxima altura del modal */
+}
+
+/* Botón de cerrar */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: #e53935;
+}
+
+/* Estilos para el poster y detalles */
+.movie-poster-large {
+  width: 30%; /* Ajustar el ancho de la imagen */
+  height: auto;
+  margin-right: 20px; /* Espacio a la derecha */
+  float: left; /* Flotante a la izquierda */
+}
+
+.movie-title-large {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #ffffff; /* Color blanco para mayor contraste */
+}
+
+.movie-synopsis {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #f0f0f0; /* Color claro para mejor legibilidad */
+}
+
+.movie-additional-details {
+  margin-bottom: 20px;
+  color: #f0f0f0; /* Color claro para mejor legibilidad */
+}
+
+.movie-detail {
+  margin-bottom: 10px;
+  color: #f0f0f0; /* Color claro para mejor legibilidad */
+}
+
+/* Estilos para el botón de comprar entrada */
+.buy-button {
+  background-color: #4CAF50; /* Color verde para el botón */
+  color: white;
+  border: none;
+  padding: 8px 16px; /* Tamaño de padding más pequeño */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Tamaño de fuente más pequeño */
+  margin-top: 20px; /* Espacio superior */
+  width: auto; /* Ancho automático */
+}
+
+.buy-button:hover {
+  background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+  .movie-detail-view {
+    padding: 10px; /* Menos padding en móviles */
+    max-width: 95%; /* Mayor ancho en móviles */
+    width: auto; /* Ancho automático en móviles */
+  }
+
+  .movie-poster-large {
+    width: 100%; /* Imagen ocupa el 100% en móviles */
+    float: none; /* Desactivar el flotante */
+    margin-bottom: 20px; /* Espacio inferior */
+  }
+
+  .movie-title-large {
+    font-size: 20px; /* Tamaño de fuente más pequeño en móviles */
+    color: #ffffff; /* Color blanco para mayor contraste */
+  }
+
+  .movie-synopsis,
+  .movie-detail {
+    font-size: 14px; /* Tamaño de fuente más pequeño en móviles */
+    color: #f0f0f0; /* Color claro para mejor legibilidad */
+  }
+
+  .buy-button {
+    padding: 6px 12px; /* Menos padding en móviles */
+  }
+}

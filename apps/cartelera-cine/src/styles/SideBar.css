@@ -1,0 +1,81 @@
+.sidebar {
+  width: 80px; /* Ancho contraído */
+  background-color: #1C1a19;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  position: fixed;
+  height: 100%;
+  box-shadow: 0px 0 50px #28143A;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.sidebar:hover {
+  width: 220px;
+  z-index: 1001;
+}
+
+.sidebar-header {
+  display: none;
+}
+
+.sidebar-menu {
+  margin-top: 10px;
+}
+
+.sidebar-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.4rem; /* Aumentar tamaño de la letra */
+  margin: 8px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* Prevenir que el texto se envuelva */
+  background-color: #1b1a1b; /* Asegurar el fondo coherente */
+}
+
+/* Ocultar el texto en estado contraído */
+.sidebar-menu li span {
+  display: none;
+}
+
+.sidebar-menu li:hover {
+  background-color: #8555B4;
+}
+
+.sidebar-menu li svg {
+  margin: 0;
+  font-size: 1.50rem; /* Aumentar tamaño del icono */
+}
+
+/* Mostrar texto y logo cuando se expande */
+.sidebar:hover .sidebar-header {
+  display: flex;
+}
+
+.sidebar:hover .sidebar-menu li span {
+  display: inline;
+  font-size: 1.2rem; /* Aumentar tamaño del texto al expandirse */
+}
+
+/* Asegurarse de que el contenido no se desborde */
+.sidebar-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-menu li {
+  overflow: hidden;
+}
